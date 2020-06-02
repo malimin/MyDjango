@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+{#  <h1>测试 {{ user }}  </h1>#}
+  {% if msg %}
+    <h1>{{ msg }}</h1>
+  {% else %}
+    {% if man %}
+      <h1>{{ man }}</h1>
+    {% else %}
+      <h1> {{ user }} --此用户不存在!</h1>
+    {% endif %}
+  {% endif %}
+{% endblock content1 %}

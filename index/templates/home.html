@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+	<h1>测试</h1>
+	<br>
+	<div class="container">
+		<div class="row">
+			{% for foo in api %}
+				<div class="col-sm">
+					<div class="card" style="width: 14rem;">
+						{#                    <div class="card" style="width:auto;">#}
+						{#                      <img src="{{ foo.avatar_url}}" class="card-img-top" alt="...">#}
+						<img src="" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 class="card-title">{{ foo.login }}</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+								content.</p>
+							<a href="#" class="btn btn-primary">{{ foo.node_id }}</a>
+						</div>
+					</div>
+					<br>
+				</div>
+			{% endfor %}
+		</div>
+		{#            {{ "<!--" }}#}
+	</div>
+	{#    {{ '--!>' }}#}
+{% endblock content1 %}
